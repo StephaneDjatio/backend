@@ -50,7 +50,8 @@ class Shop(models.Model):
     shop_logo = models.FileField(upload_to='shop')
     shop_backdrop = models.FileField(upload_to='shop')
     shop_address = models.CharField(max_length=255, null=True)
-    shop_location = models.MultiPointField(srid=4326, null=True)
+    shop_latitude = models.FloatField(null=True)
+    shop_longitude = models.FloatField(null=True)
 
     class Meta:
         managed = True
